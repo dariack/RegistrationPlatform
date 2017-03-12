@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
 
 .printInputText {
     font-size: 14px !important;
@@ -13,7 +14,7 @@ textarea.form-control {
     vertical-align: middle;
     background: #f8f8f8;
     border: 3px solid #ddd;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-size: 20px;
     font-weight: 300;
     line-height: 50px;
