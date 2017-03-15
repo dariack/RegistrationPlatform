@@ -2844,7 +2844,9 @@
 		justify-content: center;
 		list-style: none;
 		padding: 0;
-		width: 100%;
+		margin: 0 100px 0 100px;
+		width: 80%;
+		direction: RTL;
 	}
 
 		.features-b li {
@@ -3214,13 +3216,19 @@
 	}
 	
 	.sponsors-img-tera {
-		max-height:68px;
+		max-height:80px;
 		width: auto;
 		align-items: center;
 	}
 
+	.sponsors-img-giga {
+		max-height:65px;
+		width: auto;
+		align-items: center;
+	}
+	
 	.sponsors-img-partners {
-		max-height:52px;
+		max-height:35px;
 		width: auto;
 		align-items: center;
 	}
