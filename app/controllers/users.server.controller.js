@@ -318,12 +318,20 @@ exports.register = function (req, res, next) {
                     return res.status(500).json(err.code);
                 }
             } else {
-                var subject = config.eventname + ' Registration';
-                var body = "Hi " + user.first_name + " " + user.last_name + "\nYou have successfully registered to "
-                    + config.eventname + ".\nPlease user your email and password to login to our team creation " +
-                    "platform and create or join a team.\n"
-                    + config.eventwebsite + "/login\n\n" + config.eventname + " Team";
-                sendGeneralEmail(user.email, subject, body);
+                var subject = 'הרשמתך לאירוע ' + config.eventname;
+                var body = "\nשלום " + user.first_name + " " + user.last_name + "\n\n" +
+
+                    "הרשמתך להאקתון נקלטה בהצלחה." + "\n\n" +
+                    "מספר הודעות חשובות:\n"+
+                    "\n1. אין אפשרות להרשם להאקתון שלא במסגרת קבוצה." + "\n" + "לכן, יש להכנס למערכת ההרשמה בעזרת שם המשתמש והסיסמה שלך - ולהרשם לקבוצה קיימת, או ליצור קבוצה חדשה: " +
+                    config.eventwebsite + "/login\n\n" +
+                    "2. הודעה זו לא מאשרת את הששתפותך באירוע." + "\n" +
+                    "לאור כמות גדולה של נרשמים, לא כל מי שנרשם יוכל להשתתף לצערנו. יש להמתין לאישור השתתפות סופי.\n\n" +
+                    "3. עשו לנו לייק בפייסבוק, לעדכונים חשובים ופרטים נוספים לקראת האירוע:" + "\n" + "https://www.facebook.com/HujiHack" + "\n\n" +
+                        "מאושרים שנרשמתם :)\n" +
+                        "צוות Huji Hackathon"
+
+               sendGeneralEmail(user.email, subject, body);
                 res.send("ok")
             }
         });
