@@ -3231,6 +3231,14 @@
 		max-height:35px;
 		width: auto;
 		align-items: center;
+		margin: 2em;
+	}
+	
+	.sponsors-img-partners-short {
+		max-height:90px;
+		width: auto;
+		margin: 2em;
+		align-items: center;
 	}
 	
 	@media screen and (max-width: 736px) {
@@ -3242,7 +3250,7 @@
 			.sponsors-img-partners {
 				height: 52px;
 			}
-
+			
 			.sponsors-img-tech {
 				height: 16px;
 			}
