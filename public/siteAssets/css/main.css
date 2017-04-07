@@ -3227,6 +3227,11 @@
 		align-items: center;
 	}
 	
+	.sponsors-img-mega {
+		max-height:55px;
+		width: auto;
+	}
+	
 	.sponsors-img-partners {
 		max-height:35px;
 		width: auto;
