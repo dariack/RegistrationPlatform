@@ -521,13 +521,14 @@ exports.userAgree = function (req, res, next) {
                 } else {
                     var msgToRender = "";
                     if (user.accepted) {
-                        msgToRender = 'You have already RSVP\'d.';
+                        msgToRender = 'כבר אישרת הגעה\'d.';
                     } else {
-                        msgToRender = "You have accepted the rules & RSVP'd for the " + config.eventname;
-                        var subject = config.eventname + ' RSVP confirmation';
-                        var body = "Hi " + user.first_name + " " + user.last_name +
-                            "\nYou have accepted the rules and RSVP\'d for the " +
-                            config.eventname + ".\n\nSee you soon!\n" + config.eventname + " Team";
+                        msgToRender = "אישור ההגעה שלך נקלט במערכת, תודה";
+                        var subject = config.eventname + ' אישור הגעה';
+                        var body = user.first_name + " " + user.last_name + "\n" +
+                            "אישור ההגעה שלך נקלט במערכת \n" +
+                            "נתראה בקרוב, \n" +
+                            config.eventname;
                         sendGeneralEmail(user.email, subject, body);
                     }
 
