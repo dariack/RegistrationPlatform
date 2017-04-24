@@ -7,22 +7,14 @@
 </head>
 
 <body class="landing">
-<div style="background: linear-gradient(180deg, #009cff, #5bffc2);">
-    <section id="banner">
-        <div class="inner">
+    <div id="page-wrapper" style="background-color:#FFF; text-align:center; direction: rtl;"> 			
+        <div>
             <% if (name){ %>
-            <p>Hi <%= name %>, <%= msg %></p>
+            <p><%= name %>, <%= msg %></p>
 
-            <p>A confirmation email was sent to <%= email %>.</p>
-
-            <p>See you soon!</p>
+            <p>מייל אישור נשלח ל- <%= email %>.</p>
         </div>
-
-        <div class="skyline">
-            <img src="/assets/img/cover smart city with animation-02.svg">
-        </div>
-    </section>
+    </div>
     <% } %>
-</div>
 </body>
 </html>
