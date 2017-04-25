@@ -521,7 +521,7 @@ exports.userAgree = function (req, res, next) {
                 } else {
                     var msgToRender = "";
                     if (user.accepted) {
-                        msgToRender = 'כבר אישרת הגעה\'d.';
+                        msgToRender = "כבר אישרת הגעה\'d.";
                     } else {
                         msgToRender = "אישור ההגעה שלך נקלט במערכת, תודה";
                         var subject = config.eventname + ' אישור הגעה';
